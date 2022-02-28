@@ -120,8 +120,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var $siteList = $('.siteList');
 var $lastLi = $siteList.find('li.last');
-var x = localStorage.getItem('x');
-var xObject = JSON.parse(x);
+var website = localStorage.getItem('website');
+var xObject = JSON.parse(website);
 var hashMap = xObject || [{
   logo: 'A',
   logoType: 'text',
@@ -171,7 +171,7 @@ $('.addButton').on('click', function () {
 
 window.onbeforeunload = function () {
   var string = JSON.stringify(hashMap);
-  localStorage.setItem('x', string);
+  localStorage.setItem('website', string);
 };
 
 $(document).on('keypress', function (e) {
@@ -211,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57043" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63729" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
